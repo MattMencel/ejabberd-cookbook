@@ -24,6 +24,8 @@ when 'centos', 'redhat', 'amazon', 'scientific'
   include_recipe 'yum-epel'
 end
 
+include_recipe 'erlang'
+
 git '/usr/local/src/ejabberd' do
   repository node[:ejabberd][:repo]
   checkout_branch node[:ejabberd][:version]
