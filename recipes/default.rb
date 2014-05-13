@@ -28,7 +28,7 @@ include_recipe 'erlang'
 
 git '/usr/local/src/ejabberd' do
   repository node[:ejabberd][:repo]
-  checkout_branch node[:ejabberd][:version]
+  reference node[:ejabberd][:version]
   action :sync
   # notifies :run, "bash[compile_app_name]"
 end
