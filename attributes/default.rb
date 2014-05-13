@@ -1,5 +1,5 @@
-default[:ejabberd][:version] = '14.05'
-default[:ejabberd][:repo] = 'https://github.com/processone/ejabberd.git'
+# default[:ejabberd][:version] = '14.05'
+# default[:ejabberd][:repo] = 'https://github.com/processone/ejabberd.git'
 
 default[:ejabberd][:admin] = 'admin'
 default[:ejabberd][:adminpw] = 'secret'
