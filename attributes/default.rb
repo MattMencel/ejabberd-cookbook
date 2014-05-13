@@ -4,6 +4,6 @@ default[:ejabberd][:repo] = 'https://github.com/processone/ejabberd.git'
 default[:ejabberd][:admin] = 'admin'
 default[:ejabberd][:adminpw] = 'secret'
 default[:ejabberd][:domain] = 'ejabberd.example.com'
-defualt[:ejabberd][:prefix] = '/opt/ejabberd'
+default[:ejabberd][:prefix] = '/opt/ejabberd'
 
 default[:ejabberd][:jabber_domain] = node[:fqdn]
