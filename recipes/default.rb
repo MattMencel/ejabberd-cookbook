@@ -24,16 +24,22 @@ when 'centos', 'redhat', 'amazon', 'scientific'
   include_recipe 'yum-epel'
 end
 
-package 'ejabberd'
-
-service 'ejabberd' do
-  action :enable
+git '/usr/local/src/ejabberd' do
+  repository node[:ejabberd][:repo]
+  checkout_branch node[:ejabberd][:version]
+  action :sync
+  # notifies :run, "bash[compile_app_name]"
 end
 
-template '/etc/ejabberd/ejabberd.cfg' do
-  source 'ejabberd.cfg.erb'
-  group 'ejabberd'
-  mode '755'
-  variables jabber_domain: node['ejabberd']['jabber_domain']
-  notifies :restart, resources('service[ejabberd]')
-end
+#
+# service 'ejabberd' do
+#   action :enable
+# end
+#
+# template '/etc/ejabberd/ejabberd.cfg' do
+#   source 'ejabberd.cfg.erb'
+#   group 'ejabberd'
+#   mode '755'
+#   variables jabber_domain: node['ejabberd']['jabber_domain']
+#   notifies :restart, resources('service[ejabberd]')
+# end

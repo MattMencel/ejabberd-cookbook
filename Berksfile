@@ -6,4 +6,5 @@ end
 
 metadata
 cookbook 'apt'
+cookbook 'erlang', '~> 1.5'
 cookbook 'yum-epel', '~> 0.3'
