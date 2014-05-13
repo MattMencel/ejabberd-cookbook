@@ -6,4 +6,4 @@ end
 
 metadata
 cookbook 'apt'
-cookbook 'yum-epel'
+cookbook 'yum-epel', '~> 0.3'
