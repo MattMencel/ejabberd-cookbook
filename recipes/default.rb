@@ -110,6 +110,7 @@ service 'ejabberd' do
 end
 
 template '/etc/ejabberd/ejabberd.cfg' do
+  cookbook node[:ejabberd][:template_cookbook]
   source 'ejabberd.cfg.erb'
   group 'ejabberd'
   mode '755'

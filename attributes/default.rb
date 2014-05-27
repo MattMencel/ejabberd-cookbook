@@ -5,6 +5,7 @@ default[:ejabberd][:admin] = 'admin'
 default[:ejabberd][:adminpw] = 'secret'
 default[:ejabberd][:domain] = 'ejabberd.example.com'
 default[:ejabberd][:prefix] = '/opt/ejabberd'
+default[:ejabberd][:template_cookbook] = 'ejabberd'
 
 default[:ejabberd][:jabber_domain] = node[:fqdn]
 
